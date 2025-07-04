@@ -1,0 +1,14 @@
+name: Webhook Trigger
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [opened, closed]
+
+jobs:
+  trigger-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
